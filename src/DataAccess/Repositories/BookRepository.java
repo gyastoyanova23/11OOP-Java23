@@ -1,6 +1,5 @@
 package DataAccess.Repositories;
 import BusinessLogic.Models.Book;
-
 import java.util.ArrayList;
 import java.util.List;
 public class BookRepository {
@@ -10,5 +9,8 @@ public class BookRepository {
     }
     public List<Book> findAll() {
         return new ArrayList<>(books);
+    }
+    public void delete(Book book) {
+        books.remove(book);
     }
 }
